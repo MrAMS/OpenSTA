@@ -151,6 +151,9 @@ cc_library(
         "sdf",  # For generated SdfParse.hh
         "power",  # For generated SaifParse.hh
     ],
+    deps = [
+        "@rules_flex//flex:current_flex_toolchain",  # Provides FlexLexer.h for scanner headers
+    ],
 )
 
 flex_cc_library(
